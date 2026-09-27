@@ -1,0 +1,7 @@
+Running: xsim.dir/twiddle_rom_tb_behav/xsimk.exe -simmode gui -wdb twiddle_rom_tb_behav.wdb -simrunnum 0 -socket 49274
+Design successfully loaded
+Design Loading Memory Usage: 19020 KB (Peak: 19020 KB)
+Design Loading CPU Usage: 61 ms
+Simulation completed
+Simulation Memory Usage: 19984 KB (Peak: 19984 KB)
+Simulation CPU Usage: 93 ms

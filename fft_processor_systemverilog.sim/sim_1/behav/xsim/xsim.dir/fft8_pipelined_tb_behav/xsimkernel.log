@@ -1,0 +1,7 @@
+Running: xsim.dir/fft8_pipelined_tb_behav/xsimk.exe -simmode gui -wdb fft8_pipelined_tb_behav.wdb -simrunnum 0 -socket 56905
+Design successfully loaded
+Design Loading Memory Usage: 18952 KB (Peak: 18952 KB)
+Design Loading CPU Usage: 46 ms
+Simulation completed
+Simulation Memory Usage: 19980 KB (Peak: 19980 KB)
+Simulation CPU Usage: 77 ms

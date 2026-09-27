@@ -1,0 +1,14 @@
+Time resolution is 1 ps
+-----------------------------------------------
+        Pipelined 8-Point FFT Output
+-----------------------------------------------
+X[0] = 36 + j0
+X[1] = -4 + j10
+X[2] = -4 + j4
+X[3] = -4 + j2
+X[4] = -4 + j0
+X[5] = -4 + j-2
+X[6] = -4 + j-4
+X[7] = -4 + j-10
+-----------------------------------------------
+$finish called at time : 70 ns : File "C:/Users/sandb/fft_processor_systemverilog/fft_processor_systemverilog.srcs/sim_1/new/fft8_pipelined_tb.sv" Line 57

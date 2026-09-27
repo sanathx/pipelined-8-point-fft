@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2026.1 (64-bit)
+# SW Build 6511674 on Tue Jun 16 11:02:23 MDT 2026
+# IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+# SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+# Start of session at: Sun Aug  9 18:00:27 2026
+# Process ID         : 9608
+# Current directory  : C:/Users/sandb/fft_processor_systemverilog/fft_processor_systemverilog.runs/synth_1
+# Command line       : vivado.exe -log fft8_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source fft8_top.tcl
+# Log file           : C:/Users/sandb/fft_processor_systemverilog/fft_processor_systemverilog.runs/synth_1/fft8_top.vds
+# Journal file       : C:/Users/sandb/fft_processor_systemverilog/fft_processor_systemverilog.runs/synth_1\vivado.jou
+# Running On         : Mango
+# Platform           : Windows 11
+# Operating System   : 26200
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i5-13450HX
+# CPU Frequency      : 2611 MHz
+# CPU Physical cores : 10
+# CPU Logical cores  : 16
+# Host memory        : 16849 MB
+# Swap memory        : 21474 MB
+# Total Virtual      : 38324 MB
+# Available Virtual  : 16661 MB
+#-----------------------------------------------------------
+source fft8_top.tcl -notrace

@@ -1,0 +1,576 @@
+
+*** Running vivado
+    with args -log fft8_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source fft8_top.tcl
+
+
+INFO: [Common 17-3922] A valid Vivado Design Suite BASIC license has been detected. Your current license is active and will expire on 06-aug-2027.
+#-----------------------------------------------------------
+# Vivado v2026.1 (64-bit)
+# SW Build 6511674 on Tue Jun 16 11:02:23 MDT 2026
+# IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+# SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+# Start of session at: Sun Aug  9 18:00:27 2026
+# Process ID         : 9608
+# Current directory  : C:/Users/sandb/fft_processor_systemverilog/fft_processor_systemverilog.runs/synth_1
+# Command line       : vivado.exe -log fft8_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source fft8_top.tcl
+# Log file           : C:/Users/sandb/fft_processor_systemverilog/fft_processor_systemverilog.runs/synth_1/fft8_top.vds
+# Journal file       : C:/Users/sandb/fft_processor_systemverilog/fft_processor_systemverilog.runs/synth_1\vivado.jou
+# Running On         : Mango
+# Platform           : Windows 11
+# Operating System   : 26200
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i5-13450HX
+# CPU Frequency      : 2611 MHz
+# CPU Physical cores : 10
+# CPU Logical cores  : 16
+# Host memory        : 16849 MB
+# Swap memory        : 21474 MB
+# Total Virtual      : 38324 MB
+# Available Virtual  : 16661 MB
+#-----------------------------------------------------------
+
+****** Vivado v2026.1 (64-bit)
+  **** SW Build 6511674 on Tue Jun 16 11:02:23 MDT 2026
+  **** IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+  **** SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+  **** Start of session at: Sun Aug  9 18:00:27 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source fft8_top.tcl -notrace
+create_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 585.035 ; gain = 269.777
+Command: synth_design -top fft8_top -part xc7a200tfbg676-2
+Starting synth_design
+Attempting to get a license for feature 'Vivado_Synthesis' and/or device 'xc7a200t'
+INFO: [Common 17-349] Got license for feature 'Vivado_Synthesis' and/or device 'xc7a200t'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 17192
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1162.785 ; gain = 569.855
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-11067] parameter 'WIDTH' declared inside package 'fft_pkg' shall be treated as localparam [C:/Users/sandb/fft_processor_systemverilog/fft_processor_systemverilog.srcs/sources_1/new/fft_pkg.sv:2]
+WARNING: [Synth 8-11067] parameter 'FFT_SIZE' declared inside package 'fft_pkg' shall be treated as localparam [C:/Users/sandb/fft_processor_systemverilog/fft_processor_systemverilog.srcs/sources_1/new/fft_pkg.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'fft8_top' [C:/Users/sandb/fft_processor_systemverilog/fft_processor_systemverilog.srcs/sources_1/new/fft8_top.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'fft_stage1' [C:/Users/sandb/fft_processor_systemverilog/fft_processor_systemverilog.srcs/sources_1/new/fft_stage1.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'twiddle_rom' [C:/Users/sandb/fft_processor_systemverilog/fft_processor_systemverilog.srcs/sources_1/new/twiddle_rom.sv:2]
+INFO: [Synth 8-226] default block is never used [C:/Users/sandb/fft_processor_systemverilog/fft_processor_systemverilog.srcs/sources_1/new/twiddle_rom.sv:9]
+INFO: [Synth 8-6155] done synthesizing module 'twiddle_rom' (0#1) [C:/Users/sandb/fft_processor_systemverilog/fft_processor_systemverilog.srcs/sources_1/new/twiddle_rom.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'butterfly' [C:/Users/sandb/fft_processor_systemverilog/fft_processor_systemverilog.srcs/sources_1/new/butterlfy.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'complex_multiplier' [C:/Users/sandb/fft_processor_systemverilog/fft_processor_systemverilog.srcs/sources_1/new/complex_multiplier.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'complex_multiplier' (0#1) [C:/Users/sandb/fft_processor_systemverilog/fft_processor_systemverilog.srcs/sources_1/new/complex_multiplier.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'butterfly' (0#1) [C:/Users/sandb/fft_processor_systemverilog/fft_processor_systemverilog.srcs/sources_1/new/butterlfy.sv:2]
+INFO: [Synth 8-6155] done synthesizing module 'fft_stage1' (0#1) [C:/Users/sandb/fft_processor_systemverilog/fft_processor_systemverilog.srcs/sources_1/new/fft_stage1.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'fft_stage2' [C:/Users/sandb/fft_processor_systemverilog/fft_processor_systemverilog.srcs/sources_1/new/fft_stage2.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'fft_stage2' (0#1) [C:/Users/sandb/fft_processor_systemverilog/fft_processor_systemverilog.srcs/sources_1/new/fft_stage2.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'fft_stage3' [C:/Users/sandb/fft_processor_systemverilog/fft_processor_systemverilog.srcs/sources_1/new/fft_stage3.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'fft_stage3' (0#1) [C:/Users/sandb/fft_processor_systemverilog/fft_processor_systemverilog.srcs/sources_1/new/fft_stage3.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'fft8_top' (0#1) [C:/Users/sandb/fft_processor_systemverilog/fft_processor_systemverilog.srcs/sources_1/new/fft8_top.sv:3]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1285.418 ; gain = 692.488
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1285.418 ; gain = 692.488
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a200tfbg676-2
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a200tfbg676-2
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1285.418 ; gain = 692.488
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1285.418 ; gain = 692.488
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 24    
+	   2 Input   16 Bit       Adders := 24    
+	   3 Input   16 Bit       Adders := 24    
++---Registers : 
+	               16 Bit    Registers := 48    
++---Muxes : 
+	   4 Input   16 Bit        Muxes := 14    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 740 (col length:100)
+BRAMs: 730 (col length: RAMB18 100 RAMB36 50)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+DSP Report: Generating DSP STAGE1/BF3/MULT/ac, operation Mode is: A*B.
+DSP Report: operator STAGE1/BF3/MULT/ac is absorbed into DSP STAGE1/BF3/MULT/ac.
+DSP Report: Generating DSP STAGE1/BF3/MULT/q15_round_return0, operation Mode is: C-A*B.
+DSP Report: operator STAGE1/BF3/MULT/q15_round_return0 is absorbed into DSP STAGE1/BF3/MULT/q15_round_return0.
+DSP Report: operator STAGE1/BF3/MULT/bd is absorbed into DSP STAGE1/BF3/MULT/q15_round_return0.
+DSP Report: Generating DSP STAGE2/BF2/MULT/ac, operation Mode is: A2*B.
+DSP Report: register stage1_reg_reg[6][real_part] is absorbed into DSP STAGE2/BF2/MULT/ac.
+DSP Report: operator STAGE2/BF2/MULT/ac is absorbed into DSP STAGE2/BF2/MULT/ac.
+DSP Report: Generating DSP STAGE1/BF3/MULT/ad, operation Mode is: A*B.
+DSP Report: operator STAGE1/BF3/MULT/ad is absorbed into DSP STAGE1/BF3/MULT/ad.
+DSP Report: Generating DSP STAGE1/BF3/MULT/q15_round_return0, operation Mode is: C+A*B.
+DSP Report: operator STAGE1/BF3/MULT/q15_round_return0 is absorbed into DSP STAGE1/BF3/MULT/q15_round_return0.
+DSP Report: operator STAGE1/BF3/MULT/bc is absorbed into DSP STAGE1/BF3/MULT/q15_round_return0.
+DSP Report: Generating DSP STAGE2/BF2/MULT/q15_round_return0, operation Mode is: C-A2*B.
+DSP Report: register stage1_reg_reg[6][imag_part] is absorbed into DSP STAGE2/BF2/MULT/q15_round_return0.
+DSP Report: operator STAGE2/BF2/MULT/q15_round_return0 is absorbed into DSP STAGE2/BF2/MULT/q15_round_return0.
+DSP Report: operator STAGE2/BF2/MULT/bd is absorbed into DSP STAGE2/BF2/MULT/q15_round_return0.
+DSP Report: Generating DSP STAGE1/BF2/MULT/ac, operation Mode is: A*B.
+DSP Report: operator STAGE1/BF2/MULT/ac is absorbed into DSP STAGE1/BF2/MULT/ac.
+DSP Report: Generating DSP STAGE1/BF2/MULT/q15_round_return0, operation Mode is: C-A*B.
+DSP Report: operator STAGE1/BF2/MULT/q15_round_return0 is absorbed into DSP STAGE1/BF2/MULT/q15_round_return0.
+DSP Report: operator STAGE1/BF2/MULT/bd is absorbed into DSP STAGE1/BF2/MULT/q15_round_return0.
+DSP Report: Generating DSP STAGE3/BF0/MULT/ac, operation Mode is: A2*B.
+DSP Report: register stage2_reg_reg[4][real_part] is absorbed into DSP STAGE3/BF0/MULT/ac.
+DSP Report: operator STAGE3/BF0/MULT/ac is absorbed into DSP STAGE3/BF0/MULT/ac.
+DSP Report: Generating DSP STAGE2/BF2/MULT/ad, operation Mode is: A2*B.
+DSP Report: register stage1_reg_reg[6][real_part] is absorbed into DSP STAGE2/BF2/MULT/ad.
+DSP Report: operator STAGE2/BF2/MULT/ad is absorbed into DSP STAGE2/BF2/MULT/ad.
+DSP Report: Generating DSP STAGE2/BF2/MULT/q15_round_return0, operation Mode is: C+A2*B.
+DSP Report: register stage1_reg_reg[6][imag_part] is absorbed into DSP STAGE2/BF2/MULT/q15_round_return0.
+DSP Report: operator STAGE2/BF2/MULT/q15_round_return0 is absorbed into DSP STAGE2/BF2/MULT/q15_round_return0.
+DSP Report: operator STAGE2/BF2/MULT/bc is absorbed into DSP STAGE2/BF2/MULT/q15_round_return0.
+DSP Report: Generating DSP STAGE1/BF2/MULT/ad, operation Mode is: A*B.
+DSP Report: operator STAGE1/BF2/MULT/ad is absorbed into DSP STAGE1/BF2/MULT/ad.
+DSP Report: Generating DSP STAGE1/BF2/MULT/q15_round_return0, operation Mode is: C+A*B.
+DSP Report: operator STAGE1/BF2/MULT/q15_round_return0 is absorbed into DSP STAGE1/BF2/MULT/q15_round_return0.
+DSP Report: operator STAGE1/BF2/MULT/bc is absorbed into DSP STAGE1/BF2/MULT/q15_round_return0.
+DSP Report: Generating DSP STAGE3/BF0/MULT/q15_round_return0, operation Mode is: C-A2*B.
+DSP Report: register stage2_reg_reg[4][imag_part] is absorbed into DSP STAGE3/BF0/MULT/q15_round_return0.
+DSP Report: operator STAGE3/BF0/MULT/q15_round_return0 is absorbed into DSP STAGE3/BF0/MULT/q15_round_return0.
+DSP Report: operator STAGE3/BF0/MULT/bd is absorbed into DSP STAGE3/BF0/MULT/q15_round_return0.
+DSP Report: Generating DSP STAGE1/BF1/MULT/ac, operation Mode is: A*B.
+DSP Report: operator STAGE1/BF1/MULT/ac is absorbed into DSP STAGE1/BF1/MULT/ac.
+DSP Report: Generating DSP STAGE1/BF1/MULT/q15_round_return0, operation Mode is: C-A*B.
+DSP Report: operator STAGE1/BF1/MULT/q15_round_return0 is absorbed into DSP STAGE1/BF1/MULT/q15_round_return0.
+DSP Report: operator STAGE1/BF1/MULT/bd is absorbed into DSP STAGE1/BF1/MULT/q15_round_return0.
+DSP Report: Generating DSP STAGE2/BF0/MULT/ac, operation Mode is: A2*B.
+DSP Report: register stage1_reg_reg[2][real_part] is absorbed into DSP STAGE2/BF0/MULT/ac.
+DSP Report: operator STAGE2/BF0/MULT/ac is absorbed into DSP STAGE2/BF0/MULT/ac.
+DSP Report: Generating DSP STAGE1/BF1/MULT/ad, operation Mode is: A*B.
+DSP Report: operator STAGE1/BF1/MULT/ad is absorbed into DSP STAGE1/BF1/MULT/ad.
+DSP Report: Generating DSP STAGE1/BF1/MULT/q15_round_return0, operation Mode is: C+A*B.
+DSP Report: operator STAGE1/BF1/MULT/q15_round_return0 is absorbed into DSP STAGE1/BF1/MULT/q15_round_return0.
+DSP Report: operator STAGE1/BF1/MULT/bc is absorbed into DSP STAGE1/BF1/MULT/q15_round_return0.
+DSP Report: Generating DSP STAGE2/BF0/MULT/q15_round_return0, operation Mode is: C-A2*B.
+DSP Report: register stage1_reg_reg[2][imag_part] is absorbed into DSP STAGE2/BF0/MULT/q15_round_return0.
+DSP Report: operator STAGE2/BF0/MULT/q15_round_return0 is absorbed into DSP STAGE2/BF0/MULT/q15_round_return0.
+DSP Report: operator STAGE2/BF0/MULT/bd is absorbed into DSP STAGE2/BF0/MULT/q15_round_return0.
+DSP Report: Generating DSP STAGE1/BF0/MULT/ac, operation Mode is: A*B.
+DSP Report: operator STAGE1/BF0/MULT/ac is absorbed into DSP STAGE1/BF0/MULT/ac.
+DSP Report: Generating DSP STAGE1/BF0/MULT/q15_round_return0, operation Mode is: C-A*B.
+DSP Report: operator STAGE1/BF0/MULT/q15_round_return0 is absorbed into DSP STAGE1/BF0/MULT/q15_round_return0.
+DSP Report: operator STAGE1/BF0/MULT/bd is absorbed into DSP STAGE1/BF0/MULT/q15_round_return0.
+DSP Report: Generating DSP STAGE3/BF0/MULT/ad, operation Mode is: A2*B.
+DSP Report: register stage2_reg_reg[4][real_part] is absorbed into DSP STAGE3/BF0/MULT/ad.
+DSP Report: operator STAGE3/BF0/MULT/ad is absorbed into DSP STAGE3/BF0/MULT/ad.
+DSP Report: Generating DSP STAGE3/BF0/MULT/q15_round_return0, operation Mode is: C+A2*B.
+DSP Report: register stage2_reg_reg[4][imag_part] is absorbed into DSP STAGE3/BF0/MULT/q15_round_return0.
+DSP Report: operator STAGE3/BF0/MULT/q15_round_return0 is absorbed into DSP STAGE3/BF0/MULT/q15_round_return0.
+DSP Report: operator STAGE3/BF0/MULT/bc is absorbed into DSP STAGE3/BF0/MULT/q15_round_return0.
+DSP Report: Generating DSP STAGE2/BF0/MULT/ad, operation Mode is: A2*B.
+DSP Report: register stage1_reg_reg[2][real_part] is absorbed into DSP STAGE2/BF0/MULT/ad.
+DSP Report: operator STAGE2/BF0/MULT/ad is absorbed into DSP STAGE2/BF0/MULT/ad.
+DSP Report: Generating DSP STAGE2/BF0/MULT/q15_round_return0, operation Mode is: C+A2*B.
+DSP Report: register stage1_reg_reg[2][imag_part] is absorbed into DSP STAGE2/BF0/MULT/q15_round_return0.
+DSP Report: operator STAGE2/BF0/MULT/q15_round_return0 is absorbed into DSP STAGE2/BF0/MULT/q15_round_return0.
+DSP Report: operator STAGE2/BF0/MULT/bc is absorbed into DSP STAGE2/BF0/MULT/q15_round_return0.
+DSP Report: Generating DSP STAGE1/BF0/MULT/ad, operation Mode is: A*B.
+DSP Report: operator STAGE1/BF0/MULT/ad is absorbed into DSP STAGE1/BF0/MULT/ad.
+DSP Report: Generating DSP STAGE1/BF0/MULT/q15_round_return0, operation Mode is: C+A*B.
+DSP Report: operator STAGE1/BF0/MULT/q15_round_return0 is absorbed into DSP STAGE1/BF0/MULT/q15_round_return0.
+DSP Report: operator STAGE1/BF0/MULT/bc is absorbed into DSP STAGE1/BF0/MULT/q15_round_return0.
+DSP Report: Generating DSP STAGE2/BF3/MULT/ac, operation Mode is: A2*B.
+DSP Report: register stage1_reg_reg[7][real_part] is absorbed into DSP STAGE2/BF3/MULT/ac.
+DSP Report: operator STAGE2/BF3/MULT/ac is absorbed into DSP STAGE2/BF3/MULT/ac.
+DSP Report: Generating DSP STAGE2/BF3/MULT/q15_round_return0, operation Mode is: C-A2*B.
+DSP Report: register stage1_reg_reg[7][imag_part] is absorbed into DSP STAGE2/BF3/MULT/q15_round_return0.
+DSP Report: operator STAGE2/BF3/MULT/q15_round_return0 is absorbed into DSP STAGE2/BF3/MULT/q15_round_return0.
+DSP Report: operator STAGE2/BF3/MULT/bd is absorbed into DSP STAGE2/BF3/MULT/q15_round_return0.
+DSP Report: Generating DSP STAGE3/BF1/MULT/ac, operation Mode is: A2*B.
+DSP Report: register stage2_reg_reg[5][real_part] is absorbed into DSP STAGE3/BF1/MULT/ac.
+DSP Report: operator STAGE3/BF1/MULT/ac is absorbed into DSP STAGE3/BF1/MULT/ac.
+DSP Report: Generating DSP STAGE2/BF3/MULT/ad, operation Mode is: A2*B.
+DSP Report: register stage1_reg_reg[7][real_part] is absorbed into DSP STAGE2/BF3/MULT/ad.
+DSP Report: operator STAGE2/BF3/MULT/ad is absorbed into DSP STAGE2/BF3/MULT/ad.
+DSP Report: Generating DSP STAGE2/BF3/MULT/q15_round_return0, operation Mode is: C+A2*B.
+DSP Report: register stage1_reg_reg[7][imag_part] is absorbed into DSP STAGE2/BF3/MULT/q15_round_return0.
+DSP Report: operator STAGE2/BF3/MULT/q15_round_return0 is absorbed into DSP STAGE2/BF3/MULT/q15_round_return0.
+DSP Report: operator STAGE2/BF3/MULT/bc is absorbed into DSP STAGE2/BF3/MULT/q15_round_return0.
+DSP Report: Generating DSP STAGE3/BF1/MULT/q15_round_return0, operation Mode is: C-A2*B.
+DSP Report: register stage2_reg_reg[5][imag_part] is absorbed into DSP STAGE3/BF1/MULT/q15_round_return0.
+DSP Report: operator STAGE3/BF1/MULT/q15_round_return0 is absorbed into DSP STAGE3/BF1/MULT/q15_round_return0.
+DSP Report: operator STAGE3/BF1/MULT/bd is absorbed into DSP STAGE3/BF1/MULT/q15_round_return0.
+DSP Report: Generating DSP STAGE2/BF1/MULT/ac, operation Mode is: A2*B.
+DSP Report: register stage1_reg_reg[3][real_part] is absorbed into DSP STAGE2/BF1/MULT/ac.
+DSP Report: operator STAGE2/BF1/MULT/ac is absorbed into DSP STAGE2/BF1/MULT/ac.
+DSP Report: Generating DSP STAGE2/BF1/MULT/q15_round_return0, operation Mode is: C-A2*B.
+DSP Report: register stage1_reg_reg[3][imag_part] is absorbed into DSP STAGE2/BF1/MULT/q15_round_return0.
+DSP Report: operator STAGE2/BF1/MULT/q15_round_return0 is absorbed into DSP STAGE2/BF1/MULT/q15_round_return0.
+DSP Report: operator STAGE2/BF1/MULT/bd is absorbed into DSP STAGE2/BF1/MULT/q15_round_return0.
+DSP Report: Generating DSP STAGE3/BF1/MULT/ad, operation Mode is: A2*B.
+DSP Report: register stage2_reg_reg[5][real_part] is absorbed into DSP STAGE3/BF1/MULT/ad.
+DSP Report: operator STAGE3/BF1/MULT/ad is absorbed into DSP STAGE3/BF1/MULT/ad.
+DSP Report: Generating DSP STAGE3/BF1/MULT/q15_round_return0, operation Mode is: C+A2*B.
+DSP Report: register stage2_reg_reg[5][imag_part] is absorbed into DSP STAGE3/BF1/MULT/q15_round_return0.
+DSP Report: operator STAGE3/BF1/MULT/q15_round_return0 is absorbed into DSP STAGE3/BF1/MULT/q15_round_return0.
+DSP Report: operator STAGE3/BF1/MULT/bc is absorbed into DSP STAGE3/BF1/MULT/q15_round_return0.
+DSP Report: Generating DSP STAGE2/BF1/MULT/ad, operation Mode is: A2*B.
+DSP Report: register stage1_reg_reg[3][real_part] is absorbed into DSP STAGE2/BF1/MULT/ad.
+DSP Report: operator STAGE2/BF1/MULT/ad is absorbed into DSP STAGE2/BF1/MULT/ad.
+DSP Report: Generating DSP STAGE2/BF1/MULT/q15_round_return0, operation Mode is: C+A2*B.
+DSP Report: register stage1_reg_reg[3][imag_part] is absorbed into DSP STAGE2/BF1/MULT/q15_round_return0.
+DSP Report: operator STAGE2/BF1/MULT/q15_round_return0 is absorbed into DSP STAGE2/BF1/MULT/q15_round_return0.
+DSP Report: operator STAGE2/BF1/MULT/bc is absorbed into DSP STAGE2/BF1/MULT/q15_round_return0.
+DSP Report: Generating DSP STAGE3/BF2/MULT/ac, operation Mode is: A2*B.
+DSP Report: register stage2_reg_reg[6][real_part] is absorbed into DSP STAGE3/BF2/MULT/ac.
+DSP Report: operator STAGE3/BF2/MULT/ac is absorbed into DSP STAGE3/BF2/MULT/ac.
+DSP Report: Generating DSP STAGE3/BF2/MULT/q15_round_return0, operation Mode is: C-A2*B.
+DSP Report: register stage2_reg_reg[6][imag_part] is absorbed into DSP STAGE3/BF2/MULT/q15_round_return0.
+DSP Report: operator STAGE3/BF2/MULT/q15_round_return0 is absorbed into DSP STAGE3/BF2/MULT/q15_round_return0.
+DSP Report: operator STAGE3/BF2/MULT/bd is absorbed into DSP STAGE3/BF2/MULT/q15_round_return0.
+DSP Report: Generating DSP STAGE3/BF2/MULT/ad, operation Mode is: A2*B.
+DSP Report: register stage2_reg_reg[6][real_part] is absorbed into DSP STAGE3/BF2/MULT/ad.
+DSP Report: operator STAGE3/BF2/MULT/ad is absorbed into DSP STAGE3/BF2/MULT/ad.
+DSP Report: Generating DSP STAGE3/BF2/MULT/q15_round_return0, operation Mode is: C+A2*B.
+DSP Report: register stage2_reg_reg[6][imag_part] is absorbed into DSP STAGE3/BF2/MULT/q15_round_return0.
+DSP Report: operator STAGE3/BF2/MULT/q15_round_return0 is absorbed into DSP STAGE3/BF2/MULT/q15_round_return0.
+DSP Report: operator STAGE3/BF2/MULT/bc is absorbed into DSP STAGE3/BF2/MULT/q15_round_return0.
+DSP Report: Generating DSP STAGE3/BF3/MULT/ac, operation Mode is: A2*B.
+DSP Report: register stage2_reg_reg[7][real_part] is absorbed into DSP STAGE3/BF3/MULT/ac.
+DSP Report: operator STAGE3/BF3/MULT/ac is absorbed into DSP STAGE3/BF3/MULT/ac.
+DSP Report: Generating DSP STAGE3/BF3/MULT/q15_round_return0, operation Mode is: C-A2*B.
+DSP Report: register stage2_reg_reg[7][imag_part] is absorbed into DSP STAGE3/BF3/MULT/q15_round_return0.
+DSP Report: operator STAGE3/BF3/MULT/q15_round_return0 is absorbed into DSP STAGE3/BF3/MULT/q15_round_return0.
+DSP Report: operator STAGE3/BF3/MULT/bd is absorbed into DSP STAGE3/BF3/MULT/q15_round_return0.
+DSP Report: Generating DSP STAGE3/BF3/MULT/ad, operation Mode is: A2*B.
+DSP Report: register stage2_reg_reg[7][real_part] is absorbed into DSP STAGE3/BF3/MULT/ad.
+DSP Report: operator STAGE3/BF3/MULT/ad is absorbed into DSP STAGE3/BF3/MULT/ad.
+DSP Report: Generating DSP STAGE3/BF3/MULT/q15_round_return0, operation Mode is: C+A2*B.
+DSP Report: register stage2_reg_reg[7][imag_part] is absorbed into DSP STAGE3/BF3/MULT/q15_round_return0.
+DSP Report: operator STAGE3/BF3/MULT/q15_round_return0 is absorbed into DSP STAGE3/BF3/MULT/q15_round_return0.
+DSP Report: operator STAGE3/BF3/MULT/bc is absorbed into DSP STAGE3/BF3/MULT/q15_round_return0.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1535.887 ; gain = 942.957
+---------------------------------------------------------------------------------
+ Sort Area is  STAGE2/BF0/MULT/q15_round_return0_b : 0 0 : 2168 2168 : Used 1 time 0
+ Sort Area is  STAGE2/BF1/MULT/q15_round_return0_23 : 0 0 : 2168 2168 : Used 1 time 0
+ Sort Area is  STAGE2/BF2/MULT/q15_round_return0_19 : 0 0 : 2168 2168 : Used 1 time 0
+ Sort Area is  STAGE2/BF3/MULT/q15_round_return0_27 : 0 0 : 2168 2168 : Used 1 time 0
+ Sort Area is  STAGE3/BF0/MULT/q15_round_return0_1b : 0 0 : 2168 2168 : Used 1 time 0
+ Sort Area is  STAGE3/BF1/MULT/q15_round_return0_29 : 0 0 : 2168 2168 : Used 1 time 0
+ Sort Area is  STAGE3/BF2/MULT/q15_round_return0_2f : 0 0 : 2168 2168 : Used 1 time 0
+ Sort Area is  STAGE3/BF3/MULT/q15_round_return0_33 : 0 0 : 2168 2168 : Used 1 time 0
+ Sort Area is  STAGE1/BF0/MULT/q15_round_return0_2 : 0 0 : 2152 2152 : Used 1 time 0
+ Sort Area is  STAGE1/BF1/MULT/q15_round_return0_8 : 0 0 : 2152 2152 : Used 1 time 0
+ Sort Area is  STAGE1/BF2/MULT/q15_round_return0_17 : 0 0 : 2152 2152 : Used 1 time 0
+ Sort Area is  STAGE1/BF3/MULT/q15_round_return0_12 : 0 0 : 2152 2152 : Used 1 time 0
+ Sort Area is  STAGE2/BF0/MULT/q15_round_return0_1f : 0 0 : 2045 2045 : Used 1 time 0
+ Sort Area is  STAGE2/BF1/MULT/q15_round_return0_2b : 0 0 : 2045 2045 : Used 1 time 0
+ Sort Area is  STAGE2/BF2/MULT/q15_round_return0_14 : 0 0 : 2045 2045 : Used 1 time 0
+ Sort Area is  STAGE2/BF3/MULT/q15_round_return0_25 : 0 0 : 2045 2045 : Used 1 time 0
+ Sort Area is  STAGE3/BF0/MULT/q15_round_return0_21 : 0 0 : 2045 2045 : Used 1 time 0
+ Sort Area is  STAGE3/BF1/MULT/q15_round_return0_2d : 0 0 : 2045 2045 : Used 1 time 0
+ Sort Area is  STAGE3/BF2/MULT/q15_round_return0_31 : 0 0 : 2045 2045 : Used 1 time 0
+ Sort Area is  STAGE3/BF3/MULT/q15_round_return0_35 : 0 0 : 2045 2045 : Used 1 time 0
+ Sort Area is  STAGE1/BF0/MULT/q15_round_return0_1d : 0 0 : 2029 2029 : Used 1 time 0
+ Sort Area is  STAGE1/BF1/MULT/q15_round_return0_5 : 0 0 : 2029 2029 : Used 1 time 0
+ Sort Area is  STAGE1/BF2/MULT/q15_round_return0_e : 0 0 : 2029 2029 : Used 1 time 0
+ Sort Area is  STAGE1/BF3/MULT/q15_round_return0_10 : 0 0 : 2029 2029 : Used 1 time 0
+ Sort Area is  STAGE2/BF0/MULT/ac_9 : 0 0 : 1953 1953 : Used 1 time 0
+ Sort Area is  STAGE2/BF0/MULT/ad_1e : 0 0 : 1953 1953 : Used 1 time 0
+ Sort Area is  STAGE2/BF1/MULT/ac_22 : 0 0 : 1953 1953 : Used 1 time 0
+ Sort Area is  STAGE2/BF1/MULT/ad_2a : 0 0 : 1953 1953 : Used 1 time 0
+ Sort Area is  STAGE2/BF2/MULT/ac_18 : 0 0 : 1953 1953 : Used 1 time 0
+ Sort Area is  STAGE2/BF2/MULT/ad_13 : 0 0 : 1953 1953 : Used 1 time 0
+ Sort Area is  STAGE2/BF3/MULT/ac_26 : 0 0 : 1953 1953 : Used 1 time 0
+ Sort Area is  STAGE2/BF3/MULT/ad_24 : 0 0 : 1953 1953 : Used 1 time 0
+ Sort Area is  STAGE3/BF0/MULT/ac_1a : 0 0 : 1953 1953 : Used 1 time 0
+ Sort Area is  STAGE3/BF0/MULT/ad_20 : 0 0 : 1953 1953 : Used 1 time 0
+ Sort Area is  STAGE3/BF1/MULT/ac_28 : 0 0 : 1953 1953 : Used 1 time 0
+ Sort Area is  STAGE3/BF1/MULT/ad_2c : 0 0 : 1953 1953 : Used 1 time 0
+ Sort Area is  STAGE3/BF2/MULT/ac_2e : 0 0 : 1953 1953 : Used 1 time 0
+ Sort Area is  STAGE3/BF2/MULT/ad_30 : 0 0 : 1953 1953 : Used 1 time 0
+ Sort Area is  STAGE3/BF3/MULT/ac_32 : 0 0 : 1953 1953 : Used 1 time 0
+ Sort Area is  STAGE3/BF3/MULT/ad_34 : 0 0 : 1953 1953 : Used 1 time 0
+ Sort Area is  STAGE1/BF0/MULT/ac_0 : 0 0 : 1937 1937 : Used 1 time 0
+ Sort Area is  STAGE1/BF0/MULT/ad_1c : 0 0 : 1937 1937 : Used 1 time 0
+ Sort Area is  STAGE1/BF1/MULT/ac_7 : 0 0 : 1937 1937 : Used 1 time 0
+ Sort Area is  STAGE1/BF1/MULT/ad_4 : 0 0 : 1937 1937 : Used 1 time 0
+ Sort Area is  STAGE1/BF2/MULT/ac_16 : 0 0 : 1937 1937 : Used 1 time 0
+ Sort Area is  STAGE1/BF2/MULT/ad_d : 0 0 : 1937 1937 : Used 1 time 0
+ Sort Area is  STAGE1/BF3/MULT/ac_11 : 0 0 : 1937 1937 : Used 1 time 0
+ Sort Area is  STAGE1/BF3/MULT/ad_f : 0 0 : 1937 1937 : Used 1 time 0
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++-------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name        | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|complex_multiplier | A*B         | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|complex_multiplier | C-A*B       | 16     | 16     | 31     | -      | 31     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|fft8_top           | A2*B        | 16     | 16     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|complex_multiplier | A*B         | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|complex_multiplier | C+A*B       | 16     | 16     | 31     | -      | 31     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|fft8_top           | C-A2*B      | 16     | 16     | 31     | -      | 31     | 1    | 0    | 0    | -    | -     | 0    | 0    | 
+|complex_multiplier | A*B         | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|complex_multiplier | C-A*B       | 16     | 16     | 31     | -      | 31     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|fft8_top           | A2*B        | 16     | 16     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fft8_top           | A2*B        | 16     | 16     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fft8_top           | C+A2*B      | 16     | 16     | 31     | -      | 31     | 1    | 0    | 0    | -    | -     | 0    | 0    | 
+|complex_multiplier | A*B         | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|complex_multiplier | C+A*B       | 16     | 16     | 31     | -      | 31     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|fft8_top           | C-A2*B      | 16     | 16     | 31     | -      | 31     | 1    | 0    | 0    | -    | -     | 0    | 0    | 
+|complex_multiplier | A*B         | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|complex_multiplier | C-A*B       | 16     | 16     | 31     | -      | 31     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|fft8_top           | A2*B        | 16     | 16     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|complex_multiplier | A*B         | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|complex_multiplier | C+A*B       | 16     | 16     | 31     | -      | 31     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|fft8_top           | C-A2*B      | 16     | 16     | 31     | -      | 31     | 1    | 0    | 0    | -    | -     | 0    | 0    | 
+|complex_multiplier | A*B         | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|complex_multiplier | C-A*B       | 16     | 16     | 31     | -      | 31     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|fft8_top           | A2*B        | 16     | 16     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fft8_top           | C+A2*B      | 16     | 16     | 31     | -      | 31     | 1    | 0    | 0    | -    | -     | 0    | 0    | 
+|fft8_top           | A2*B        | 16     | 16     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fft8_top           | C+A2*B      | 16     | 16     | 31     | -      | 31     | 1    | 0    | 0    | -    | -     | 0    | 0    | 
+|complex_multiplier | A*B         | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|complex_multiplier | C+A*B       | 16     | 16     | 31     | -      | 31     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|fft8_top           | A2*B        | 16     | 16     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fft8_top           | C-A2*B      | 16     | 16     | 31     | -      | 31     | 1    | 0    | 0    | -    | -     | 0    | 0    | 
+|fft8_top           | A2*B        | 16     | 16     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fft8_top           | A2*B        | 16     | 16     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fft8_top           | C+A2*B      | 16     | 16     | 31     | -      | 31     | 1    | 0    | 0    | -    | -     | 0    | 0    | 
+|fft8_top           | C-A2*B      | 16     | 16     | 31     | -      | 31     | 1    | 0    | 0    | -    | -     | 0    | 0    | 
+|fft8_top           | A2*B        | 16     | 16     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fft8_top           | C-A2*B      | 16     | 16     | 31     | -      | 31     | 1    | 0    | 0    | -    | -     | 0    | 0    | 
+|fft8_top           | A2*B        | 16     | 16     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fft8_top           | C+A2*B      | 16     | 16     | 31     | -      | 31     | 1    | 0    | 0    | -    | -     | 0    | 0    | 
+|fft8_top           | A2*B        | 16     | 16     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fft8_top           | C+A2*B      | 16     | 16     | 31     | -      | 31     | 1    | 0    | 0    | -    | -     | 0    | 0    | 
+|fft8_top           | A2*B        | 16     | 16     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fft8_top           | C-A2*B      | 16     | 16     | 31     | -      | 31     | 1    | 0    | 0    | -    | -     | 0    | 0    | 
+|fft8_top           | A2*B        | 16     | 16     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fft8_top           | C+A2*B      | 16     | 16     | 31     | -      | 31     | 1    | 0    | 0    | -    | -     | 0    | 0    | 
+|fft8_top           | A2*B        | 16     | 16     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fft8_top           | C-A2*B      | 16     | 16     | 31     | -      | 31     | 1    | 0    | 0    | -    | -     | 0    | 0    | 
+|fft8_top           | A2*B        | 16     | 16     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fft8_top           | C+A2*B      | 16     | 16     | 31     | -      | 31     | 1    | 0    | 0    | -    | -     | 0    | 0    | 
++-------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1551.652 ; gain = 958.723
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1551.652 ; gain = 958.723
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1806.371 ; gain = 1213.441
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1806.371 ; gain = 1213.441
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1806.371 ; gain = 1213.441
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1806.371 ; gain = 1213.441
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1806.371 ; gain = 1213.441
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1806.371 ; gain = 1213.441
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++-------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name        | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|complex_multiplier | A*B         | 30     | 15     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|complex_multiplier | C-(A*B)     | 30     | 0      | 48     | -      | 31     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|complex_multiplier | A*B         | 30     | 0      | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|complex_multiplier | C+A*B       | 30     | 15     | 48     | -      | 31     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|complex_multiplier | A*B         | 30     | 15     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|complex_multiplier | C-(A*B)     | 30     | 0      | 48     | -      | 31     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|complex_multiplier | A*B         | 30     | 0      | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|complex_multiplier | C+A*B       | 30     | 15     | 48     | -      | 31     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|complex_multiplier | A*B         | 30     | 15     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|complex_multiplier | C-(A*B)     | 30     | 0      | 48     | -      | 31     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|complex_multiplier | A*B         | 30     | 0      | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|complex_multiplier | C+A*B       | 30     | 15     | 48     | -      | 31     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|complex_multiplier | A*B         | 30     | 15     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|complex_multiplier | C-(A*B)     | 30     | 0      | 48     | -      | 31     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|complex_multiplier | A*B         | 30     | 0      | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|complex_multiplier | C+A*B       | 30     | 15     | 48     | -      | 31     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|fft8_top           | A'*B        | 30     | 15     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fft8_top           | C-(A'*B)    | 30     | 0      | 48     | -      | 31     | 1    | 0    | 0    | -    | -     | 0    | 0    | 
+|fft8_top           | A'*B        | 30     | 0      | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fft8_top           | C+A'*B      | 30     | 15     | 48     | -      | 31     | 1    | 0    | 0    | -    | -     | 0    | 0    | 
+|fft8_top           | A'*B        | 30     | 0      | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fft8_top           | C-(A'*B)    | 30     | 18     | 48     | -      | 31     | 1    | 0    | 0    | -    | -     | 0    | 0    | 
+|fft8_top           | A'*B        | 30     | 18     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fft8_top           | C+A'*B      | 30     | 0      | 48     | -      | 31     | 1    | 0    | 0    | -    | -     | 0    | 0    | 
+|fft8_top           | A'*B        | 30     | 15     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fft8_top           | C-(A'*B)    | 30     | 0      | 48     | -      | 31     | 1    | 0    | 0    | -    | -     | 0    | 0    | 
+|fft8_top           | A'*B        | 30     | 0      | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fft8_top           | C+A'*B      | 30     | 15     | 48     | -      | 31     | 1    | 0    | 0    | -    | -     | 0    | 0    | 
+|fft8_top           | A'*B        | 30     | 0      | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fft8_top           | C-(A'*B)    | 30     | 18     | 48     | -      | 31     | 1    | 0    | 0    | -    | -     | 0    | 0    | 
+|fft8_top           | A'*B        | 30     | 18     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fft8_top           | C+A'*B      | 30     | 0      | 48     | -      | 31     | 1    | 0    | 0    | -    | -     | 0    | 0    | 
+|fft8_top           | A'*B        | 30     | 15     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fft8_top           | C-(A'*B)    | 30     | 0      | 48     | -      | 31     | 1    | 0    | 0    | -    | -     | 0    | 0    | 
+|fft8_top           | A'*B        | 30     | 0      | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fft8_top           | C+A'*B      | 30     | 15     | 48     | -      | 31     | 1    | 0    | 0    | -    | -     | 0    | 0    | 
+|fft8_top           | A'*B        | 30     | 15     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fft8_top           | C-(A'*B)    | 30     | 18     | 48     | -      | 31     | 1    | 0    | 0    | -    | -     | 0    | 0    | 
+|fft8_top           | A'*B        | 30     | 18     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fft8_top           | C+A'*B      | 30     | 15     | 48     | -      | 31     | 1    | 0    | 0    | -    | -     | 0    | 0    | 
+|fft8_top           | A'*B        | 30     | 0      | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fft8_top           | C-(A'*B)    | 30     | 18     | 48     | -      | 31     | 1    | 0    | 0    | -    | -     | 0    | 0    | 
+|fft8_top           | A'*B        | 30     | 18     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fft8_top           | C+A'*B      | 30     | 0      | 48     | -      | 31     | 1    | 0    | 0    | -    | -     | 0    | 0    | 
+|fft8_top           | A'*B        | 30     | 18     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fft8_top           | C-(A'*B)    | 30     | 18     | 48     | -      | 31     | 1    | 0    | 0    | -    | -     | 0    | 0    | 
+|fft8_top           | A'*B        | 30     | 18     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|fft8_top           | C+A'*B      | 30     | 18     | 48     | -      | 31     | 1    | 0    | 0    | -    | -     | 0    | 0    | 
++-------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |BUFG    |     1|
+|2     |CARRY4  |   312|
+|3     |DSP48E1 |    48|
+|4     |LUT1    |    24|
+|5     |LUT2    |   768|
+|6     |FDRE    |   512|
+|7     |IBUF    |   258|
+|8     |OBUF    |   256|
++------+--------+------+
+
+Report Instance Areas: 
++------+-----------+----------------------+------+
+|      |Instance   |Module                |Cells |
++------+-----------+----------------------+------+
+|1     |top        |                      |  2179|
+|2     |  STAGE1   |fft_stage1            |   384|
+|3     |    BF0    |butterfly_14          |    96|
+|4     |      MULT |complex_multiplier_21 |    80|
+|5     |    BF1    |butterfly_15          |    96|
+|6     |      MULT |complex_multiplier_20 |    80|
+|7     |    BF2    |butterfly_16          |    96|
+|8     |      MULT |complex_multiplier_19 |    80|
+|9     |    BF3    |butterfly_17          |    96|
+|10    |      MULT |complex_multiplier_18 |    80|
+|11    |  STAGE2   |fft_stage2            |   384|
+|12    |    BF0    |butterfly_6           |    96|
+|13    |      MULT |complex_multiplier_13 |    80|
+|14    |    BF1    |butterfly_7           |    96|
+|15    |      MULT |complex_multiplier_12 |    80|
+|16    |    BF2    |butterfly_8           |    96|
+|17    |      MULT |complex_multiplier_11 |    80|
+|18    |    BF3    |butterfly_9           |    96|
+|19    |      MULT |complex_multiplier_10 |    80|
+|20    |  STAGE3   |fft_stage3            |   384|
+|21    |    BF0    |butterfly             |    96|
+|22    |      MULT |complex_multiplier_5  |    80|
+|23    |    BF1    |butterfly_0           |    96|
+|24    |      MULT |complex_multiplier_4  |    80|
+|25    |    BF2    |butterfly_1           |    96|
+|26    |      MULT |complex_multiplier_3  |    80|
+|27    |    BF3    |butterfly_2           |    96|
+|28    |      MULT |complex_multiplier    |    80|
++------+-----------+----------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1806.371 ; gain = 1213.441
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1806.371 ; gain = 1213.441
+Synthesis Optimization Complete : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1809.305 ; gain = 1213.441
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 1822.410 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 360 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1947.477 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: b001e429
+INFO: [Common 17-83] Releasing license: Vivado_Synthesis
+27 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 1948.500 ; gain = 1363.465
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1948.500 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/sandb/fft_processor_systemverilog/fft_processor_systemverilog.runs/synth_1/fft8_top.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file fft8_top_utilization_synth.rpt -pb fft8_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Aug  9 18:00:58 2026...

@@ -1,0 +1,7 @@
+Running: xsim.dir/butterfly_tb_behav/xsimk.exe -simmode gui -wdb butterfly_tb_behav.wdb -simrunnum 0 -socket 59686
+Design successfully loaded
+Design Loading Memory Usage: 19004 KB (Peak: 19004 KB)
+Design Loading CPU Usage: 62 ms
+Simulation completed
+Simulation Memory Usage: 19816 KB (Peak: 19816 KB)
+Simulation CPU Usage: 93 ms
